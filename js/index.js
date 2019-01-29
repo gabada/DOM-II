@@ -4,8 +4,9 @@ busImg.addEventListener('mouseover', e => {
     busImg.setAttribute('src', 'img/fire_s_bus.png')
 });
 
-const headers = document.getElementsByTagName('h2');
+
 const navBus = document.querySelector('.logo-heading');
+const headers = document.getElementsByTagName('h2');
 window.addEventListener('scroll', e => {
     navBus.textContent = "Struggle Bus"
     headers[1].textContent = "STRUGGLE!"
@@ -30,6 +31,7 @@ window.addEventListener('resize', e => {
 const secondSlide = document.querySelector('.content-destination img');
 secondSlide.addEventListener('contextmenu', e => {
     secondSlide.setAttribute('src', 'img/alone.jpg')
+    e.stopPropagation();
 })
 
 const signUpBtn = document.querySelectorAll('.btn');
@@ -49,12 +51,18 @@ signUpBtn[2].addEventListener('cut', e => {
     signUpBtn[2].textContent = "you will STRUGGLE!!"
     signUpBtn[2].style.backgroundColor = 'red'
     signUpBtn[2].style.color = 'black'
+    e.stopPropagation();
 })
 
-const aLink = document.querySelectorAll('.nav a')
+const aLink = document.querySelectorAll('.nav a');
     aLink[0].addEventListener('mousemove', e => {
-        aLink[0].style.color = 'red'
-        aLink[2].style.color = 'red'
-        // Stop refreshing page
-        e.preventDefault();
+    aLink[0].style.color = 'red'
+    aLink[2].style.color = 'red'
+    // Stop refreshing page
+    e.preventDefault();
+})
+
+const container = document.querySelector('.home');
+    container.addEventListener('contextmenu', e => {
+        container.style.backgroundColor = "grey";
     })
