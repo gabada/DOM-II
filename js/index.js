@@ -51,7 +51,6 @@ signUpBtn[2].addEventListener('cut', e => {
     signUpBtn[2].textContent = "you will STRUGGLE!!"
     signUpBtn[2].style.backgroundColor = 'red'
     signUpBtn[2].style.color = 'black'
-    e.stopPropagation();
 })
 
 const aLink = document.querySelectorAll('.nav a');
