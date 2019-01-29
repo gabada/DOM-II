@@ -64,5 +64,5 @@ const aLink = document.querySelectorAll('.nav a');
 
 const container = document.querySelector('.home');
     container.addEventListener('contextmenu', e => {
-        container.style.backgroundColor = "grey";
+        container.style.backgroundColor = "darkred";
     })
