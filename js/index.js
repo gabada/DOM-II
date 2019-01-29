@@ -52,8 +52,9 @@ signUpBtn[2].addEventListener('cut', e => {
 })
 
 const aLink = document.querySelectorAll('.nav a')
-console.log(aLink);
     aLink[0].addEventListener('mousemove', e => {
         aLink[0].style.color = 'red'
         aLink[2].style.color = 'red'
+        // Stop refreshing page
+        e.preventDefault();
     })
